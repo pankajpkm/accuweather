@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AccuweatherTestSuite">
+	
+	<listeners>
+		<listener class-name="accuweather.org.Listner.BaseListner" /> 
+	</listeners>
+	
+	<parameter name="Browser" value="Chrome" />
+	<parameter name="url" value="https://www.accuweather.com/" />
+	<parameter name="apiKey" value="7fe67bf08c80ded756e598d6f8fedaea" />
+	
+	<test name="accuweatherTest">
+		<classes>
+			<class name="accuweather.org.AccuweatherTest">
+				<methods>
+					<include name="compareAccuweatherTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
